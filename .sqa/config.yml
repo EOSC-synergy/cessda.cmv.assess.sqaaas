@@ -2,10 +2,10 @@ config:
   credentials: []
   project_repos:
     github.com/EOSC-synergy/sqaaas-tooling:
-      branch: release/1.7.7
+      branch: fix/updatego
       repo: https://github.com/EOSC-synergy/sqaaas-tooling
     github.com/cessda/cessda.cmv:
-      branch: 146-improve-SQAaaS-score
+      branch: main
       repo: https://github.com/cessda/cessda.cmv
 environment:
   JPL_DOCKERFORCEBUILD: enabled
@@ -15,44 +15,44 @@ sqa_criteria:
     repos:
       github.com/cessda/cessda.cmv git:
         commands:
-        - /usr/bin/env sh .sqa/script.surly-pink-chin.sh
-        container: qc.acc_pretty-charcoal-caiman
+        - /usr/bin/env sh .sqa/script.aqua_sincere_orca.sh
+        container: qc.acc_butterscotch_sympathetic_dragon
   QC.Doc:
     repos:
       github.com/cessda/cessda.cmv find_doc_files.py:
         commands:
-        - /usr/bin/env sh .sqa/script.cozy-blue-koala.sh
-        container: qc.doc_bluesy-flax-insect
+        - /usr/bin/env sh .sqa/script.cardamom_mysterious_panda.sh
+        container: qc.doc_pumpkin_philosophical_ibis
       github.com/cessda/cessda.cmv git:
         commands:
-        - /usr/bin/env sh .sqa/script.dorky-sapphire-harrier.sh
-        container: qc.doc_trippy-cerise-bison
+        - /usr/bin/env sh .sqa/script.umber_focused_walrus.sh
+        container: qc.doc_grape_philosophical_lemur
       github.com/cessda/cessda.cmv markdownlint:
         commands:
-        - /usr/bin/env sh .sqa/script.frumpy-charcoal-fish.sh
-        container: qc.doc_stinky-aqua-newfoundland
+        - /usr/bin/env sh .sqa/script.moss_sad_termite.sh
+        container: qc.doc_bone_vibrant_caiman
   QC.Lic:
     repos:
       github.com/cessda/cessda.cmv licensee:
         commands:
-        - /usr/bin/env sh .sqa/script.pasty-copper-camel.sh
-        container: qc.lic_scanty-puce-crane
+        - /usr/bin/env sh .sqa/script.echelon_diligent_hedgehog.sh
+        container: qc.lic_gray_wise_vulture
   QC.Met:
     repos:
       github.com/cessda/cessda.cmv cff-converter-python:
         commands:
-        - /usr/bin/env sh .sqa/script.homey-cardinal-bonobo.sh
-        container: qc.met_trippy-cyan-dragon
+        - /usr/bin/env sh .sqa/script.flamingo_positive_donkey.sh
+        container: qc.met_pearl_hopeful_mink
   QC.Sty:
     repos:
       github.com/cessda/cessda.cmv hadolint:
         commands:
-        - /usr/bin/env sh .sqa/script.skinny-cerise-falcon.sh
-        container: qc.sty_pasty-indigo-wasp
+        - /usr/bin/env sh .sqa/script.reef_bright_newt.sh
+        container: qc.sty_forest_philosophical_crane
   QC.Ver:
     repos:
       github.com/cessda/cessda.cmv get_git_tags.py:
         commands:
-        - /usr/bin/env sh .sqa/script.clammy-chocolate-rat.sh
-        container: qc.ver_flimsy-charcoal-burmese
+        - /usr/bin/env sh .sqa/script.bluebell_sympathetic_newt.sh
+        container: qc.ver_ultramarine_blissful_llama
 timeout: 5400
